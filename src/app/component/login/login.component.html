@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+  <h2>Login User</h2>
+  <form>
+    <div>
+      <div>
+        <label for="username" >Username</label>
+        <input type="text" id="username" name="username" style="margin-left: 50px" >
+      </div>
+      <br>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" style="margin-left: 54px">
+      </div>
+      <br>
+      <div>
+        <input type="submit" id="login" value="Submit">
+        <a [routerLink]="['/register']" style="margin-left: 140px">Register</a>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

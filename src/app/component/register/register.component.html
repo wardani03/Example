@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+  <h2>Register User</h2>
+<form *ngIf="!registered" (ngSubmit)="onSubmit()" #registerForm = "ngForm">
+  <div>
+    <div>
+      <label for="ssoId">SSO ID</label>
+      <input type="text" id="ssoId" name="ssoId" placeholder="SSO ID" [(ngModel)]="newUser.sso_id" style="margin-left: 66px">
+    </div>
+    <br>
+    <div>
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" placeholder="Nama Depan" [(ngModel)]="newUser.first_name" style="margin-left: 44px">
+    </div>
+    <br>
+    <div>
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" placeholder="Nama Belakang" [(ngModel)]="newUser.last_name"style="margin-left: 45px">
+    </div>
+    <br>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email" [(ngModel)]="newUser.email" style="margin-left: 78px">
+    </div>
+    <br>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="newUser.password" style="margin-left: 54px">
+    </div>
+    <br>
+    <div>
+      <label for="repassword">Re-Password</label>
+      <input type="repassword" id="repassword" name="password" style="margin-left: 31px">
+    </div>
+    <br>
+    <div>
+      <button type="submit">Register</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
+
+<div *ngIf="registered">
+  <h1>Succsess</h1>
+</div>
